@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
-import { url } from "../../public/IMG20240710115036.jpg";
+import url from "../../public/IMG20240710115036.jpg";
 const NavBar = () => {
   const [menu, setmenu] = useState(false);
   const Navitems = [

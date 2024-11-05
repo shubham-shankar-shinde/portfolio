@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { ReactTyped } from "react-typed";
-import { url } from "../../public/IMG20240710115036.jpg";
+import  url  from "../../public/IMG20240710115036.jpg";
 
 const Home = () => {
   return (

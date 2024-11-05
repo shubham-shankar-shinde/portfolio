@@ -39,19 +39,19 @@ const Contact = () => {
                 className="shadow appearance-none rounded-lg border py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
 
-              <label className="block text-gray-700 mt-5" htmlFor="msg">
+              <label className="block text-gray-700 mt-5" htmlFor="message">
                 Message{" "}
               </label>
               <textarea
                 required
                 name="Message"
-                id="msg"
+                id="message"
                 placeholder="Enter Your Message"
                 className="shadow appearance-none rounded-lg border py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
             <button
-              class="bg-white text-black rounded-md px-4 py-1 hover:bg-blue-500 hover:text-white transition-all duration-200"
+              className="bg-white text-black rounded-md px-4 py-1 hover:bg-blue-500 hover:text-white transition-all duration-200"
               type="submit"
             >
               Submit

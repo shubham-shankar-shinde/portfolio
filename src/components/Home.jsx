@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { ReactTyped } from "react-typed";
+import { url } from "../../public/IMG20240710115036.jpg";
 
 const Home = () => {
   return (
@@ -147,7 +148,7 @@ const Home = () => {
           </div>
           <div className="md:w-1/2 md:ml-48 md:pt-20 order-1 pt-8 md:order-2 ">
             <img
-              src="../public/IMG20240710115036.jpg"
+              src={url}
               alt="profile"
               className="rounded-full md:h-[450px]"
             />

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
+import { url } from "../../public/IMG20240710115036.jpg";
 const NavBar = () => {
   const [menu, setmenu] = useState(false);
   const Navitems = [
@@ -32,11 +33,7 @@ const NavBar = () => {
       <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 bottom-0 z-50 bg-white">
         <div className=" flex justify-between items-center h-16 ">
           <div className="flex space-x-2">
-            <img
-              src="../public/IMG20240710115036.jpg"
-              alt="profile"
-              className=" h-12 w-12 rounded-full"
-            />
+            <img src={url} alt="profile" className=" h-12 w-12 rounded-full" />
             <h1 className="font-semibold text-xl cursor-pointer">
               SHUBH<span className="text-red-700 text-2xl">@M</span>
               <p className="text-sm">WEB DEVELOPER</p>

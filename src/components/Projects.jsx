@@ -11,7 +11,7 @@ const Projects = () => {
       logo: portfolio,
       name: "Portfolio",
       live: "",
-      source: "",
+      source: "https://github.com/shubham-shankar-shinde/portfolio",
       info: "Designed and developed a responsive portfolio using React and Tailwind CSS to showcase projects, skills, and experience, with smooth navigation and an interactive user experience. ",
     },
     {

@@ -12,8 +12,7 @@ const About = () => {
       <h1 className="text-green-700 font-semibold text-xl">Education </h1>
       <span>
         {" "}
-        Bachelor of Science in Computer Science (3rd year),[Shivaji University
-        Kolhapur], [P.D.V.P.Collage , Tasgaon ], Expected Graduation: May 2025
+        Bachelor of Science (B.Sc.) in Computer Science Padm Bhushan Dr. Vasantraodada Patil Mahavidyalaya, Tasgaon CGPA: 8.8 | Graduation Year: 2025 
       </span>
       <br />
       <br />

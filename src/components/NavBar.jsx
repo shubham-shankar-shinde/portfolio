@@ -3,6 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
 import url from "../../public/IMG20240710115036.jpg";
+
 const NavBar = () => {
   const [menu, setmenu] = useState(false);
   const Navitems = [
@@ -12,7 +13,7 @@ const NavBar = () => {
     },
     {
       id: 2,
-      text: "Aoout",
+      text: "About", // Fixed typo
     },
     {
       id: 3,
@@ -29,58 +30,72 @@ const NavBar = () => {
   ];
 
   return (
-    <>
-      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 bottom-0 z-50 bg-white">
-        <div className=" flex justify-between items-center h-16 ">
-          <div className="flex space-x-2">
-            <img src={url} alt="profile" className=" h-12 w-12 rounded-full" />
-            <h1 className="font-semibold text-xl cursor-pointer">
-              SHUBH<span className="text-red-700 text-2xl">@M</span>
-              <p className="text-sm">WEB DEVELOPER</p>
-            </h1>
+    <div className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg">
+      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo Section */}
+          <div className="flex items-center space-x-3">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <img
+                src={url}
+                alt="profile"
+                className="relative h-12 w-12 rounded-full object-cover border-2 border-gray-100 hover:border-blue-500 transition-colors duration-300"
+              />
+            </div>
+            <div>
+              <h1 className="font-bold text-xl cursor-pointer">
+                SHUBH<span className="text-blue-600 text-2xl">@M</span>
+              </h1>
+              <p className="text-sm text-gray-600 font-medium">WEB DEVELOPER</p>
+            </div>
           </div>
-          <div className="">
-            <ul className="md:flex space-x-8 hidden ">
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <ul className="flex items-center space-x-6">
               {Navitems.map(({ id, text }) => (
-                <li
-                  key={id}
-                  className="hover:scale-110 duration-150 cursor-pointer hover:bg-pink-300 rounded-2xl px-1 py-2  "
-                >
-                  {" "}
+                <li key={id}>
                   <Link
                     to={text}
                     smooth={true}
                     duration={500}
                     offset={-70}
-                    activeClass="active"
+                    className="px-4 py-2 rounded-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300"
+                    activeClass="text-blue-600 bg-blue-50"
                   >
                     {text}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div onClick={() => setmenu(!menu)} className="md:hidden">
-              {menu ? <IoCloseSharp size={24} /> : <AiOutlineMenu size={24} />}
-            </div>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setmenu(!menu)}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+            aria-label={menu ? "Close menu" : "Open menu"}
+          >
+            {menu ? <IoCloseSharp size={24} /> : <AiOutlineMenu size={24} />}
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
         {menu && (
-          <div className=" bg-white  ">
-            <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl ">
+          <div className="fixed inset-0 top-16 bg-white/95 backdrop-blur-sm md:hidden">
+            <ul className="flex flex-col items-center justify-center h-full space-y-6 text-lg">
               {Navitems.map(({ id, text }) => (
-                <li
-                  className="hover:scale-105 duration-150 cursor-pointer font-semibold  "
-                  key={id}
-                >
+                <li key={id}>
                   <Link
-                    onClick={() => setmenu(!menu)}
+                    onClick={() => setmenu(false)}
                     to={text}
                     smooth={true}
                     duration={500}
                     offset={-70}
-                    activeClass="active"
+                    className="block px-6 py-3 rounded-xl font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300"
+                    activeClass="text-blue-600 bg-blue-50"
                   >
-                    {" "}
                     {text}
                   </Link>
                 </li>
@@ -89,7 +104,8 @@ const NavBar = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
+
 export default NavBar;

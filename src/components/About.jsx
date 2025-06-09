@@ -32,7 +32,7 @@ const About = () => {
         {/* Introduction */}
         <div className="prose max-w-none">
           <p className="text-lg text-gray-700 leading-relaxed">
-            Hello,I'm Shubham, a passionate MERN stack developer skilled in
+            Hello, I'm Shubham, a passionate MERN stack developer skilled in
             building dynamic web applications using MongoDB, Express.js, React,
             and Node.js. My portfolio showcases projects that reflect my
             commitment to scalable, responsive, and efficient software
